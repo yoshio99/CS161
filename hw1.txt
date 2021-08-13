@@ -1,0 +1,93 @@
+Name: Tyler Adair
+UID: 604917650
+HW1 text file
+
+1. PAD Function Test Results
+
+Listed first are the results of testing the PAD function on the first ten numbers:
+
+Break 2 [3]> (PAD 0)
+1
+Break 2 [3]> (PAD 1)
+1
+Break 2 [3]> (PAD 2)
+1
+Break 2 [3]> (PAD 3)
+3
+Break 2 [3]> (PAD 4)
+5
+Break 2 [3]> (PAD 5)
+9
+Break 2 [3]> (PAD 6)
+17
+Break 2 [3]> (PAD 7)
+31
+Break 2 [3]> (PAD 8)
+57
+Break 2 [3]> (PAD 9)
+105
+Break 2 [3]> (PAD 10)
+193
+
+Listed here are the results of testing the PAD function on larger numbers:
+
+Break 1 [2]> (PAD 15)
+4063
+Break 1 [2]> (PAD 20)
+85525
+Break 2 [3]> (PAD 25)
+1800281
+Break 2 [3]> (PAD 30)
+37895489
+
+
+With these larger numbers, the function's execution time becomes larger at an alarming rate. This is because the function needs to recursively call itself more and more times to get to the base case. Even at numbers like 25 and 30, the execution time go in the magnitude of seconds, while the execution time for (PAD 35) forced me to break its execution after a few minutes. This function is quite inefficient!
+
+2. SUMS Function Test Results
+
+Listed below are the test results of testing the SUMS function on the first ten numbers:
+
+Break 3 [4]> (SUMS 0)
+0
+Break 3 [4]> (SUMS 1)
+0
+Break 3 [4]> (SUMS 2)
+0
+Break 3 [4]> (SUMS 3)
+2
+Break 3 [4]> (SUMS 4)
+4
+Break 3 [4]> (SUMS 5)
+8
+Break 3 [4]> (SUMS 6)
+16
+Break 3 [4]> (SUMS 7)
+30
+Break 3 [4]> (SUMS 8)
+56
+Break 3 [4]> (SUMS 9)
+104
+Break 3 [4]> (SUMS 10)
+192
+
+3. ANON Function Test Results
+Break 9 [10]> (load "C:/Users/yoshi/OneDrive/Desktop/hw1.lsp")
+;; Loading file C:\Users\yoshi\OneDrive\Desktop\hw1.lsp ...
+;; Loaded file C:\Users\yoshi\OneDrive\Desktop\hw1.lsp
+T
+Break 9 [10]> (ANON '42)
+0
+Break 9 [10]> (ANON 'F00)
+0
+Break 9 [10]> (ANON '(((L E) F) T))
+(((0 0) 0) 0)
+Break 9 [10]> (ANON '(5 FOO 3.1 -0.2))
+(0 0 0 0)
+Break 9 [10]> (ANON '(1 (FOO 3.1) -0.2))
+(0 (0 0) 0)
+Break 9 [10]> (ANON '(((1 2) (FOO 3.1)) (BAR -0.2)))
+(((0 0) (0 0)) (0 0))
+Break 9 [10]> (ANON '(R (I (G (H T)))))
+(0 (0 (0 (0 0))))
+
+Listed below are the test results of testing the ANON function on the given test cases in the HW #1 spec:
